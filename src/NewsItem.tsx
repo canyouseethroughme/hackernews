@@ -1,27 +1,31 @@
 import React from 'react';
+import './newsItem.css';
 
 interface NewsDataInterface {
   data?: NewsItemInterface;
+  index?: number;
 }
 
 export interface NewsItemInterface {
   storyTitle?: string;
   storyUrl?: string;
-  storyTime?: number;
+  storyTime?: string;
   storyScore?: number;
   authorId?: string;
   authorKarma?: number;
 }
 
-export const NewsItem: React.FC<NewsDataInterface> = ({ data }) => {
+export const NewsItem: React.FC<NewsDataInterface> = ({ data, index }) => {
   return (
-    <div style={{ display: 'flex' }}>
-      <p>storyTitle: {data?.storyTitle}</p>
-      <p>story url: {data?.storyUrl}</p>
-      <p>storyTime: {data?.storyTime}</p>
-      <p>storyScore: {data?.storyScore}</p>
-      <p>authorId: {data?.authorId}</p>
-      <p>authorKarma: {data?.authorKarma}</p>
+    <div className={`newsItem newsItem${index}`}>
+      <a href={data?.storyUrl} className="contentWrapper" target="_blank" rel="noreferrer">
+        <p className="title">{data?.storyTitle}</p>
+
+        <p className="score">score {data?.storyScore}</p>
+        <p className="author">by {data?.authorId}</p>
+        <p className="karma">karma {data?.authorKarma}</p>
+        <p className="time">date {data?.storyTime}</p>
+      </a>
     </div>
   );
 };
