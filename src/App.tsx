@@ -14,8 +14,6 @@ const App: React.FC = () => {
             const user = (await getUsers(news.by)) as UserInterface;
 
             const time = new Date(news.time).toLocaleDateString();
-            console.log(new Date(news.time));
-
             return {
               storyTitle: news.title,
               storyUrl: news.url,
