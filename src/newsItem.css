@@ -1,0 +1,56 @@
+.newsItem {
+  height: 16rem;
+  width: 21.5rem;
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--baseColor);
+  border: 1px solid var(--lightOrange);
+}
+
+.contentWrapper {
+  width: 20rem;
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 600;
+  height: 5.5rem;
+  color: var(--lightOrange);
+}
+
+.time,
+.author {
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.time {
+  color: var(--darkOrange);
+}
+
+.author {
+  color: var(--green);
+}
+
+.karma,
+.score {
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-size: 2rem;
+}
+
+.karma {
+  color: var(--purple);
+}
+
+.score {
+  color: var(--blue);
+}
+
+p {
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+}
